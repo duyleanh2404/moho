@@ -56,8 +56,15 @@ export const Header = () => {
         ) : (
           <>
             <Hint label="Về trang chủ">
-              <Link href="/">
-                <Image src="/logo.png" alt="Logo" width={140} height={140} />
+              <Link href="/" className="flex-shrink-0">
+                <Image
+                  src="/logo.png"
+                  alt="Logo"
+                  width={140}
+                  height={140}
+                  className="w-[140px] h-auto"
+                  priority
+                />
               </Link>
             </Hint>
 
