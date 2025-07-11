@@ -48,11 +48,11 @@ export const LoginForm = () => {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(data),
-      credentials: 'include'
+      body: JSON.stringify(data)
     });
 
     const result = await res.json();
+
     if (!res.ok) {
       const error = result.statusCode === 401 && loginErrorMessages[result.message];
 
@@ -67,7 +67,12 @@ export const LoginForm = () => {
     }
 
     toast.success('Đăng nhập thành công!');
-    router.replace('/');
+
+    if (result.user?.role === 'admin') {
+      router.replace('/admin/dashboard');
+    } else {
+      router.replace('/');
+    }
   };
 
   return (
