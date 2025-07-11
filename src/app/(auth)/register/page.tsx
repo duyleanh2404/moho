@@ -16,7 +16,14 @@ const RegisterPage = () => {
     <div className="wrapper w-full sm:w-[450px] min-h-screen flex flex-col items-center justify-center gap-8 py-12">
       <Hint label="Về trang chủ">
         <Link href="/">
-          <Image src="/logo.png" alt="Logo" width={140} height={140} />
+          <Image
+            src="/logo.png"
+            alt="Logo"
+            width={140}
+            height={140}
+            className="w-[140px] h-auto"
+            priority
+          />
         </Link>
       </Hint>
       <h1 className="text-2xl font-semibold">Đăng ký tài khoản</h1>
