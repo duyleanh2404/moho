@@ -1,14 +1,13 @@
-import { Geist, Geist_Mono } from 'next/font/google';
+import { IBM_Plex_Sans } from 'next/font/google';
 import './globals.css';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin']
-});
+import { Toaster } from '@/components/ui/sonner';
+import { ReactQueryClientProvider } from '@/components/react-query-provider';
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin']
+const ibmPlexSans = IBM_Plex_Sans({
+  variable: '--font-ibm-plex-sans',
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700']
 });
 
 export default function RootLayout({
@@ -18,7 +17,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
+      <body className={`${ibmPlexSans.variable} antialiased`}>
+        <ReactQueryClientProvider>
+          <Toaster />
+          {children}
+        </ReactQueryClientProvider>
+      </body>
     </html>
   );
 }
