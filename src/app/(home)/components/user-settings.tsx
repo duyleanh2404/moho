@@ -22,17 +22,17 @@ export const UserSettings = ({ user }: { user: User }) => {
           </AvatarFallback>
         </Avatar>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-[250px] rounded-[3px] shadow-none">
+      <DropdownMenuContent align="end" className="w-[280px] rounded-[3px] shadow-none">
         <div className="flex items-center gap-2 p-2">
-          <Avatar className="size-9">
+          <Avatar className="size-10">
             <AvatarImage src={user.avatar_url} alt="Avatar Url" />
             <AvatarFallback className="text-white bg-primary">
               {user.fullname.charAt(0).toUpperCase()}
             </AvatarFallback>
           </Avatar>
           <div>
-            <p className="text-sm font-medium truncate max-w-[150px]">{user.fullname}</p>
-            <p className="text-xs text-muted-foreground truncate max-w-[150px]">{user.email}</p>
+            <p className="text-[15px] font-medium truncate max-w-[190px]">{user.fullname}</p>
+            <p className="text-[13px] text-muted-foreground truncate max-w-[190px]">{user.email}</p>
           </div>
         </div>
         <DropdownMenuSeparator />
