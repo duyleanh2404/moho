@@ -69,7 +69,7 @@ export const ProductDetails = () => {
                   key={i}
                   onClick={() => setSelectedImage(i)}
                   className={cn(
-                    'relative flex-shrink-0 w-24 sm:w-full aspect-square border-2 hover:border-secondary rounded-[3px] transition cursor-pointer overflow-hidden',
+                    'relative flex-shrink-0 w-24 sm:w-full aspect-square border-2 hover:border-secondary rounded-sm transition cursor-pointer overflow-hidden',
                     selectedImage === i ? 'border-secondary' : 'border-transparent'
                   )}
                 >
@@ -85,7 +85,7 @@ export const ProductDetails = () => {
 
             <button
               onClick={() => setIsZoomOpen(true)}
-              className="flex-1 relative w-full border border-muted rounded-[3px] overflow-hidden cursor-zoom-in aspect-[3/3]"
+              className="flex-1 relative w-full border border-muted rounded-sm overflow-hidden cursor-zoom-in aspect-[3/3]"
             >
               <Image
                 src={`/products/product-example-${selectedImage}.png`}
@@ -136,7 +136,7 @@ export const ProductDetails = () => {
             <div className="space-y-2">
               <div className="flex items-center gap-3">
                 <span className="text-sm font-medium">Số lượng:</span>
-                <div className="flex items-center border border-input rounded-[3px] overflow-hidden">
+                <div className="flex items-center border border-input rounded-sm overflow-hidden">
                   <button
                     type="button"
                     onClick={handleDecrease}
@@ -163,10 +163,10 @@ export const ProductDetails = () => {
             </div>
 
             <div className="space-y-2">
-              <Button size="lg" className="w-full uppercase rounded-[3px]">
+              <Button size="lg" className="w-full uppercase">
                 Thêm vào giỏ
               </Button>
-              <Button variant="secondary" size="lg" className="w-full uppercase rounded-[3px]">
+              <Button variant="secondary" size="lg" className="w-full uppercase">
                 Mua ngay
               </Button>
             </div>

@@ -92,12 +92,7 @@ export function VerifyEmailForm({ email }: { email: string }) {
             </FormItem>
           )}
         />
-        <Button
-          type="submit"
-          size={'lg'}
-          disabled={form.formState.isSubmitting}
-          className="w-full rounded-[3px]"
-        >
+        <Button type="submit" size={'lg'} disabled={form.formState.isSubmitting} className="w-full">
           {form.formState.isSubmitting && <Loader2 className="size-4 animate-spin" />}
           Tiếp tục
         </Button>

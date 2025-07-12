@@ -33,7 +33,7 @@ export const NewProducts = () => {
                     src={'/products/product-example-1.png'}
                     alt="Product"
                     fill
-                    className="object-cover rounded-[3px]"
+                    className="object-cover rounded-sm"
                   />
                   <p className="absolute top-2 left-2 text-[13px] text-white font-medium bg-secondary py-1 px-2 ml-auto">
                     -23%
@@ -55,7 +55,7 @@ export const NewProducts = () => {
                     src={'/products/product-example-1.png'}
                     alt="Product"
                     fill
-                    className="object-cover rounded-[3px]"
+                    className="object-cover rounded-sm"
                   />
                   <p className="absolute top-2 left-2 text-[13px] text-white font-medium bg-secondary py-1 px-2 ml-auto">
                     -23%
@@ -77,7 +77,7 @@ export const NewProducts = () => {
                     src={'/products/product-example-1.png'}
                     alt="Product"
                     fill
-                    className="object-cover rounded-[3px]"
+                    className="object-cover rounded-sm"
                   />
                   <p className="absolute top-2 left-2 text-[13px] text-white font-medium bg-secondary py-1 px-2 ml-auto">
                     -23%
@@ -99,7 +99,7 @@ export const NewProducts = () => {
                     src={'/products/product-example-1.png'}
                     alt="Product"
                     fill
-                    className="object-cover rounded-[3px]"
+                    className="object-cover rounded-sm"
                   />
                   <p className="absolute top-2 left-2 text-[13px] text-white font-medium bg-secondary py-1 px-2 ml-auto">
                     -23%

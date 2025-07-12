@@ -15,7 +15,7 @@ export const CustomToast = ({ t, message, type = 'success' }: CustomToastProps) 
   return (
     <div
       className={cn(
-        'w-full sm:w-[380px] rounded-md border py-3 px-4 shadow-sm flex items-center gap-3',
+        'w-full sm:w-[380px] rounded-sm border py-3 px-4 shadow-sm flex items-center gap-3',
         type === 'success' ? 'bg-emerald-50 border-emerald-200' : 'bg-red-50 border-red-200'
       )}
     >

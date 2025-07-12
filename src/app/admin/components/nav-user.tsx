@@ -1,6 +1,6 @@
 import { ChevronDown, Loader2, LogOut } from 'lucide-react';
 
-import { useCurrentUser } from '@/hooks/use-current-user';
+import { useCurrentUser } from '@/mutation/user/use-current-user';
 
 import {
   DropdownMenu,
@@ -38,10 +38,7 @@ export const NavUser = () => {
           <ChevronDown className="size-4 text-muted-foreground" />
         </div>
       </DropdownMenuTrigger>
-      <DropdownMenuContent
-        side={isMobile ? 'bottom' : 'right'}
-        className="w-[280px] rounded-[3px] shadow-none"
-      >
+      <DropdownMenuContent side={isMobile ? 'bottom' : 'right'} className="w-[280px]">
         <DropdownMenuItem
           onClick={() => (window.location.href = '/api/auth/logout')}
           className="group hover:!bg-secondary/5"

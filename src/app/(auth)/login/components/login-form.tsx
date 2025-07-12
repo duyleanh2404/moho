@@ -90,7 +90,7 @@ export const LoginForm = () => {
                   spellCheck={false}
                   placeholder="Nhập email của bạn"
                   disabled={form.formState.isSubmitting}
-                  className="!bg-white rounded-[3px] shadow-none"
+                  className="h-10 !bg-white"
                 />
               </FormControl>
               <FormMessage />
@@ -110,7 +110,7 @@ export const LoginForm = () => {
                     type="password"
                     placeholder="Nhập mật khẩu của bạn"
                     disabled={form.formState.isSubmitting}
-                    className="!bg-white rounded-[3px] shadow-none"
+                    className="h-10 !bg-white"
                   />
                 </FormControl>
                 <FormMessage />
@@ -124,12 +124,7 @@ export const LoginForm = () => {
             Quên mật khẩu?
           </Link>
         </div>
-        <Button
-          type="submit"
-          size={'lg'}
-          disabled={form.formState.isSubmitting}
-          className="w-full rounded-[3px]"
-        >
+        <Button type="submit" size={'lg'} disabled={form.formState.isSubmitting} className="w-full">
           {form.formState.isSubmitting && <Loader2 className="size-4 animate-spin" />}
           Đăng nhập
         </Button>

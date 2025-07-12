@@ -8,7 +8,7 @@ import { Search, Loader2, UserRound, ShoppingCart, Loader } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 import { UserSettings } from './user-settings';
-import { useCurrentUser } from '@/hooks/use-current-user';
+import { useCurrentUser } from '@/mutation/user/use-current-user';
 
 import { Hint } from '@/components/hint';
 import { Input } from '@/components/ui/input';
@@ -62,11 +62,7 @@ export const Header = () => {
         <div className="flex items-center justify-between">
           {isSearchActive ? (
             <div ref={searchRef} className="relative w-full">
-              <Input
-                placeholder="Tìm kiếm sản phẩm"
-                className="!bg-white rounded-[3px] shadow-none"
-                autoFocus
-              />
+              <Input placeholder="Tìm kiếm sản phẩm" className="!bg-white" autoFocus />
               <div className="absolute top-0 right-0">
                 <Hint label="Tìm kiếm">
                   <Button size="icon" className="rounded-l-none rounded-r-[3px]">
@@ -91,13 +87,10 @@ export const Header = () => {
               </Hint>
 
               <div className="relative hidden xl:block w-[500px]">
-                <Input
-                  placeholder="Tìm kiếm sản phẩm"
-                  className="h-11 !bg-white rounded-[3px] shadow-none"
-                />
+                <Input placeholder="Tìm kiếm sản phẩm" className="h-10 !bg-white " />
                 <div className="absolute top-0 right-0">
                   <Hint label="Tìm kiếm">
-                    <Button size="icon" className="size-11 rounded-l-none rounded-r-[3px]">
+                    <Button size="icon" className="rounded-l-none rounded-r-sm">
                       <Search />
                     </Button>
                   </Hint>
@@ -126,8 +119,8 @@ export const Header = () => {
                   <Button
                     size={'lg'}
                     variant="secondary"
-                    className="rounded-[3px]"
                     onClick={() => router.push('/login')}
+                    className="text-sm"
                   >
                     <UserRound />
                     <span>Đăng nhập / Đăng ký</span>
@@ -139,7 +132,7 @@ export const Header = () => {
                 <Button
                   size="icon"
                   variant="ghost"
-                  className="rounded-[3px] shadow-none hover:text-secondary hover:!bg-secondary/5"
+                  className="hover:text-secondary hover:!bg-secondary/5"
                   onClick={() => setIsSearchActive(true)}
                 >
                   <Search className="!size-5" />
@@ -147,7 +140,7 @@ export const Header = () => {
                 <Button
                   size="icon"
                   variant="ghost"
-                  className="rounded-[3px] shadow-none hover:text-secondary hover:!bg-secondary/5"
+                  className="hover:text-secondary hover:!bg-secondary/5"
                 >
                   <ShoppingCart className="!size-5" />
                 </Button>
@@ -160,7 +153,7 @@ export const Header = () => {
                     size="icon"
                     variant="ghost"
                     onClick={() => router.push('/login')}
-                    className="rounded-[3px] shadow-none hover:text-secondary hover:!bg-secondary/5"
+                    className="hover:text-secondary hover:!bg-secondary/5"
                   >
                     <UserRound className="!size-5" />
                   </Button>
