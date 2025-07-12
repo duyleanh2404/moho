@@ -10,7 +10,7 @@ export const ButtonLoginGoogle = ({ disabled }: { disabled: boolean }) => {
       disabled={disabled}
       variant={'outline'}
       onClick={() => (window.location.href = '/api/auth/google/login')}
-      className="w-full gap-3 !bg-white rounded-[3px] shadow-none"
+      className="w-full gap-3 !bg-white"
     >
       <Image src={'/auth/logo-google.svg'} alt="Google" width={18} height={18} />
       Tiếp tục với Google

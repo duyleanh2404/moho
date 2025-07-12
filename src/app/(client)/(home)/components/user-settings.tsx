@@ -22,7 +22,7 @@ export const UserSettings = ({ user }: { user: User }) => {
           </AvatarFallback>
         </Avatar>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-[280px] rounded-[3px] shadow-none">
+      <DropdownMenuContent align="end" className="w-[280px]">
         <div className="flex items-center gap-2 p-2">
           <Avatar className="size-10">
             <AvatarImage src={user.avatar_url} alt="Avatar Url" />

@@ -135,7 +135,7 @@ export function ResetPasswordForm({ email }: { email: string }) {
                   type="password"
                   placeholder="Nhập mật khẩu mới của bạn"
                   disabled={form.formState.isSubmitting}
-                  className="!bg-white rounded-[3px] shadow-none"
+                  className="h-10 !bg-white"
                 />
               </FormControl>
               <FormMessage />
@@ -154,19 +154,14 @@ export function ResetPasswordForm({ email }: { email: string }) {
                   type="password"
                   placeholder="Nhập lại mật khẩu mới của bạn"
                   disabled={form.formState.isSubmitting}
-                  className="!bg-white rounded-[3px] shadow-none"
+                  className="h-10 !bg-white"
                 />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
-        <Button
-          type="submit"
-          size={'lg'}
-          disabled={form.formState.isSubmitting}
-          className="w-full rounded-[3px]"
-        >
+        <Button type="submit" size={'lg'} disabled={form.formState.isSubmitting} className="w-full">
           {form.formState.isSubmitting && <Loader2 className="size-4 animate-spin" />}
           Tiếp tục
         </Button>

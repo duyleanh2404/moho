@@ -202,14 +202,14 @@ export function DataTable() {
             placeholder="Tìm kiếm sản phẩm"
             value={(table.getColumn('email')?.getFilterValue() as string) ?? ''}
             onChange={(event) => table.getColumn('email')?.setFilterValue(event.target.value)}
-            className="pl-10 !bg-white rounded-sm shadow-none"
+            className="pl-10 !bg-white"
           />
           <Search className="size-5 text-primary absolute left-3 top-1/2 -translate-y-1/2" />
         </div>
 
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="outline" className="ml-auto rounded-sm shadow-none">
+            <Button variant="outline" className="ml-auto">
               Hiển thị <ChevronDown />
             </Button>
           </DropdownMenuTrigger>

@@ -4,7 +4,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
-import { LayoutDashboard, ShoppingCart } from 'lucide-react';
+import { LayoutDashboard, ShoppingCart, UserRound } from 'lucide-react';
+
+import { NavUser } from './nav-user';
 
 import {
   Sidebar,
@@ -17,7 +19,6 @@ import {
   SidebarMenuButton,
   SidebarGroupContent
 } from '@/components/ui/sidebar';
-import { NavUser } from './nav-user';
 import { Hint } from '@/components/hint';
 
 const items = [
@@ -25,6 +26,11 @@ const items = [
     title: 'Trang chủ',
     url: '/admin/dashboard',
     icon: LayoutDashboard
+  },
+  {
+    title: 'Người dùng',
+    url: '/admin/users',
+    icon: UserRound
   },
   {
     title: 'Sản phẩm',
